@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Read the Customer Hunt Privacy Policy.">
+  <title>Privacy Policy | Customer Hunt</title>
+
+  <style>
+    :root {
+      --text: #202124;
+      --muted: #70757a;
+      --border: #e8eaed;
+      --soft: #f8f9fa;
+      --red: #d93025;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #fff;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1050px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -.5px;
+    }
+
+    .back-link {
+      color: #5f6368;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      color: var(--text);
+    }
+
+    main {
+      flex: 1;
+      padding: 52px 0 70px;
+    }
+
+    .page-heading {
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(29px, 5vw, 38px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .updated {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin-top: 25px;
+      color: #5f6368;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      gap: 55px;
+      margin-top: 42px;
+    }
+
+    .contents {
+      position: sticky;
+      top: 25px;
+      align-self: start;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .contents h2 {
+      margin-bottom: 13px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .contents a {
+      display: block;
+      padding: 7px 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .contents a:hover {
+      color: var(--red);
+    }
+
+    .policy-content {
+      min-width: 0;
+    }
+
+    .policy-section {
+      margin-bottom: 38px;
+      scroll-margin-top: 25px;
+    }
+
+    .policy-section h2 {
+      margin-bottom: 13px;
+      font-size: 19px;
+      line-height: 1.4;
+      letter-spacing: -.3px;
+    }
+
+    .policy-section p {
+      margin-bottom: 12px;
+      color: #5f6368;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .policy-section ul {
+      margin: 12px 0 15px 20px;
+      color: #5f6368;
+    }
+
+    .policy-section li {
+      margin-bottom: 9px;
+      padding-left: 4px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .policy-section strong {
+      color: #303134;
+    }
+
+    .contact-link {
+      color: #1967d2;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      color: #5f6368;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+      color: var(--text);
+    }
+        @media (max-width: 720px) {
+      .page {
+        padding: 0 17px;
+      }
+
+      .topbar {
+        height: 66px;
+      }
+
+      .brand img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .brand-name {
+        font-size: 16px;
+      }
+
+      main {
+        padding-top: 35px;
+      }
+
+      .policy-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .contents {
+        position: static;
+      }
+
+      .contents a {
+        display: inline-block;
+        margin-right: 12px;
+      }
+
+      footer {
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="topbar">
+      <a class="brand" href="/dashboard.html">
+        <img src="/logo.png" alt="Customer Hunt logo">
+        <span class="brand-name">Customer Hunt</span>
+      </a>
+
+      <a class="back-link" href="/dashboard.html">
+        ← Dashboard
+      </a>
+    </header>
+
+    <main>
+      <section class="page-heading">
+        <div class="eyebrow">Legal information</div>
+        <h1>Privacy Policy</h1>
+        <p class="updated">
+          Last updated: November 8, 2026
+        </p>
+
+        <p class="intro">
+          Customer Hunt respects your privacy. This Privacy Policy
+          explains what information may be collected when you use
+          our platform, how that information is used, how it may be
+          shared, and the choices available to you.
+        </p>
+      </section>
+
+      <div class="policy-layout">
+
+        <aside class="contents">
+          <h2>ON THIS PAGE</h2>
+
+          <a href="#information">1. Information We Collect</a>
+          <a href="#use">2. How We Use Information</a>
+          <a href="#leads">3. Public Lead Information</a>
+          <a href="#payments">4. Payments</a>
+          <a href="#sharing">5. Information Sharing</a>
+          <a href="#security">6. Data Security</a>
+          <a href="#retention">7. Data Retention</a>
+          <a href="#rights">8. Your Privacy Rights</a>
+          <a href="#children">9. Children's Privacy</a>
+          <a href="#changes">10. Policy Changes</a>
+          <a href="#contact">11. Contact</a>
+        </aside>
+
+        <article class="policy-content">
+
+          <section class="policy-section" id="information">
+            <h2>1. Information We Collect</h2>
+
+            <p>
+              When you create an account or use Customer Hunt,
+              information may be collected to provide and operate
+              the platform.
+            </p>
+
+            <p>This information may include:</p>
+
+            <ul>
+              <li>
+                <strong>Account information:</strong>
+                Your name, email address, and account credentials.
+              </li>
+
+              <li>
+                <strong>Product information:</strong>
+                The products or services you enter and the target
+                countries you select.
+              </li>
+
+              <li>
+                <strong>Platform activity:</strong>
+                Information about your product searches, saved leads,
+                account usage, and interactions with the platform.
+              </li>
+
+              <li>
+                <strong>Technical information:</strong>
+                Information such as browser type, device information,
+                IP address, and diagnostic data where collected.
+              </li>
+
+              <li>
+                <strong>Payment information:</strong>
+                Subscription and payment-status information associated
+                with your account.
+              </li>
+            </ul>
+          </section>
+
+          <section class="policy-section" id="use">
+            <h2>2. How We Use Information</h2>
+
+            <p>
+              Customer Hunt uses information for purposes connected
+              with operating and improving the platform.
+            </p>
+
+            <ul>
+              <li>Creating and managing user accounts.</li>
+              <li>Providing access to account features.</li>
+              <li>Processing product hunting requests.</li>
+              <li>Organising and displaying discovered leads.</li>
+              <li>Managing subscription access and billing status.</li>
+              <li>Maintaining platform security.</li>
+              <li>Detecting errors, abuse, and unauthorised activity.</li>
+              <li>Responding to customer support requests.</li>
+            </ul>
+          </section>
+
+          <section class="policy-section" id="leads">
+            <h2>3. Public Lead Information</h2>
+
+            <p>
+              Customer Hunt is designed to discover publicly available
+              online discussions and buying-intent signals that may
+              be relevant to products and services entered by users.
+            </p>
+
+            <p>
+              Information displayed as a lead may include the original
+              public source link, relevant text, and information
+              necessary to identify the discovery.
+            </p>
+
+            <p>
+              Leads link back to their original sources where available.
+              Users should review the original source and respect the
+              rules and privacy expectations of the website where
+              the information was published.
+            </p>
+
+            <p>
+              Customer Hunt is not the publisher or owner of third-party
+              posts and websites linked through discovered leads.
+            </p>
+          </section>
+                    <section class="policy-section" id="payments">
+            <h2>4. Payments and Subscriptions</h2>
+
+            <p>
+              Customer Hunt offers subscription features that may
+              require payment.
+            </p>
+
+            <p>
+              Payments are processed through Getly or another
+              payment provider designated by Customer Hunt.
+              Payment processing may require the provider to
+              collect and process payment information.
+            </p>
+
+            <p>
+              Customer Hunt may receive information such as
+              payment confirmation, subscription status, transaction
+              references, and renewal or cancellation status.
+            </p>
+
+            <p>
+              Payment information is also subject to the privacy
+              policy of the payment provider.
+            </p>
+          </section>
+
+          <section class="policy-section" id="sharing">
+            <h2>5. Information Sharing</h2>
+
+            <p>
+              Information may be shared when necessary to provide
+              and maintain Customer Hunt.
+            </p>
+
+            <ul>
+              <li>
+                <strong>Service providers:</strong>
+                Providers that support hosting, databases, payment
+                processing, security, and platform operations.
+              </li>
+
+              <li>
+                <strong>Legal requirements:</strong>
+                Where disclosure is required by applicable law or
+                a valid legal process.
+              </li>
+
+              <li>
+                <strong>Security:</strong>
+                Where sharing is reasonably necessary to investigate
+                fraud, abuse, or threats to the platform.
+              </li>
+
+              <li>
+                <strong>Business changes:</strong>
+                In connection with a merger, acquisition,
+                restructuring, or transfer of business assets,
+                subject to applicable legal requirements.
+              </li>
+            </ul>
+
+            <p>
+              Information is not made publicly visible merely because
+              a user creates an account. Public lead information
+              remains linked to its original third-party source.
+            </p>
+          </section>
+
+          <section class="policy-section" id="security">
+            <h2>6. Data Security</h2>
+
+            <p>
+              Customer Hunt uses technical and organisational
+              measures intended to protect information against
+              unauthorised access, alteration, disclosure, or loss.
+            </p>
+
+            <p>
+              Access to account information and platform systems
+              should be restricted to authorised purposes.
+            </p>
+
+            <p>
+              Users are responsible for keeping their account
+              passwords confidential and notifying Customer Hunt
+              if they suspect unauthorised access to their accounts.
+            </p>
+          </section>
+
+          <section class="policy-section" id="retention">
+            <h2>7. Data Retention</h2>
+
+            <p>
+              Information may be retained for as long as necessary
+              to provide the platform, maintain account records,
+              administer subscriptions, resolve disputes, maintain
+              security, and comply with applicable legal obligations.
+            </p>
+
+            <p>
+              Retention periods may differ depending on the type
+              of information and the reason it is held.
+            </p>
+          </section>
+
+          <section class="policy-section" id="rights">
+            <h2>8. Your Privacy Rights</h2>
+
+            <p>
+              Depending on your location and applicable law,
+              you may have rights concerning your personal information.
+            </p>
+
+            <ul>
+              <li>Request access to personal information.</li>
+              <li>Request correction of inaccurate information.</li>
+              <li>Request deletion where legally applicable.</li>
+              <li>Object to or restrict certain processing.</li>
+              <li>Request a copy of certain information.</li>
+              <li>Withdraw consent where processing relies on consent.</li>
+            </ul>
+
+            <p>
+              To make a privacy request, contact Customer Hunt using
+              the contact details in the final section of this policy.
+              We may need to verify your identity before responding.
+            </p>
+          </section>
+
+          <section class="policy-section" id="children">
+            <h2>9. Children's Privacy</h2>
+
+            <p>
+              Customer Hunt is intended for people who are at least
+              18 years old. We do not knowingly seek to collect
+              personal information from children under 18.
+            </p>
+
+            <p>
+              If you believe a child has provided personal information
+              through the platform, contact us so that the matter
+              can be reviewed.
+            </p>
+          </section>
+
+          <section class="policy-section" id="changes">
+            <h2>10. Changes to This Policy</h2>
+
+            <p>
+              This Privacy Policy may be updated as Customer Hunt
+              develops, introduces features, or responds to legal
+              and operational requirements.
+            </p>
+
+            <p>
+              The updated policy will be published on this page
+              with a revised update date.
+            </p>
+          </section>
+                    <section class="policy-section" id="contact">
+            <h2>11. Contact Customer Hunt</h2>
+
+            <p>
+              For privacy questions, personal information requests,
+              or concerns about this policy, contact Customer Hunt
+              using the email address below.
+            </p>
+
+            <p id="contactEmailContainer"></p>
+
+            <p>
+              You can also visit our community using the Discord
+              link below.
+            </p>
+
+            <p id="discordContainer"></p>
+          </section>
+
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <span>© <span id="currentYear"></span> Customer Hunt</span>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/policies.html">Policies</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a id="footerDiscord" href="#" hidden>Discord</a>
+      </nav>
+    </footer>
+
+  </div>
+
+  <script>
+    "use strict";
+
+    /*
+      ======================================================
+      CUSTOMER HUNT CONTACT SETTINGS
+      ======================================================
+
+      1. Enter your real support email below.
+         Example format: support@yourdomain.com
+
+      2. Enter your actual Discord server invitation URL.
+         Example format: https://discord.gg/your-invite
+
+      The examples above are instructions only.
+      Replace the empty strings with your actual details.
+    */
+
+    const CUSTOMER_HUNT_CONTACT = {
+      EMAIL: "",
+      DISCORD_SERVER_URL: ""
+    };
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    function validEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function validDiscordInvite(value) {
+      try {
+        const url = new URL(value);
+
+        return (
+          url.protocol === "https:" &&
+          (
+            url.hostname === "discord.gg" ||
+            url.hostname === "discord.com"
+          )
+        );
+      } catch {
+        return false;
+      }
+    }
+
+    function renderContactDetails() {
+      const emailContainer =
+        document.getElementById("contactEmailContainer");
+
+      const discordContainer =
+        document.getElementById("discordContainer");
+
+      const footerDiscord =
+        document.getElementById("footerDiscord");
+
+      const email = CUSTOMER_HUNT_CONTACT.EMAIL.trim();
+      const discord = CUSTOMER_HUNT_CONTACT.DISCORD_SERVER_URL.trim();
+
+      if (validEmail(email)) {
+        const emailLink = document.createElement("a");
+
+        emailLink.className = "contact-link";
+        emailLink.href = "mailto:" + email;
+        emailLink.textContent = email;
+
+        emailContainer.replaceChildren(emailLink);
+      } else {
+        emailContainer.textContent =
+          "Privacy contact email will be published here.";
+      }
+
+      if (validDiscordInvite(discord)) {
+        const discordLink = document.createElement("a");
+
+        discordLink.className = "contact-link";
+        discordLink.href = discord;
+        discordLink.target = "_blank";
+        discordLink.rel = "noopener noreferrer";
+        discordLink.textContent = "Join our Discord community";
+
+        discordContainer.replaceChildren(discordLink);
+
+        footerDiscord.href = discord;
+        footerDiscord.hidden = false;
+        footerDiscord.target = "_blank";
+        footerDiscord.rel = "noopener noreferrer";
+      } else {
+        discordContainer.textContent =
+          "Our Discord community link will be published here.";
+      }
+    }
+
+    renderContactDetails();
+  </script>
+</body>
+</html>

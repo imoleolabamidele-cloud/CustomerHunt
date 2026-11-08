@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Read the Customer Hunt Terms and Conditions governing your use of our lead discovery platform.">
+  <title>Terms and Conditions | Customer Hunt</title>
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --surface: #ffffff;
+      --text: #202124;
+      --muted: #70757a;
+      --border: #e8eaed;
+      --accent: #dc3545;
+      --accent-light: #fff1f2;
+      --sidebar: #f8f9fa;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 105px;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .site-header {
+      width: 100%;
+      height: 76px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.97);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      width: min(var(--max-width), calc(100% - 48px));
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 39px;
+      height: 39px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 19px;
+      font-weight: 750;
+      letter-spacing: -0.7px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .header-nav a {
+      color: #5f6368;
+      font-size: 13px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .header-nav a:hover,
+    .header-nav a.active {
+      color: var(--accent);
+    }
+
+    .header-dashboard {
+      padding: 10px 17px;
+      border-radius: 7px;
+      background: var(--text);
+      color: white !important;
+      transition: background 0.2s ease;
+    }
+
+    .header-dashboard:hover {
+      background: #3c4043;
+    }
+
+    .page-heading {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 68px 0 45px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 19px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .page-heading h1 {
+      font-size: clamp(32px, 5vw, 46px);
+      line-height: 1.15;
+      letter-spacing: -1.8px;
+      font-weight: 750;
+      margin-bottom: 15px;
+    }
+
+    .page-heading p {
+      max-width: 670px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .document-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-top: 23px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .document-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .document-meta strong {
+      color: #3c4043;
+      font-weight: 700;
+    }
+
+    .document-layout {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 255px minmax(0, 1fr);
+      gap: 65px;
+      align-items: start;
+      padding: 48px 0 90px;
+    }
+
+    .contents {
+      position: sticky;
+      top: 105px;
+      padding: 22px 17px;
+      background: var(--sidebar);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .contents h2 {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      color: #5f6368;
+    }
+
+    .contents nav {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .contents a {
+      display: block;
+      padding: 7px 9px;
+      border-radius: 5px;
+      color: #5f6368;
+      font-size: 12px;
+      line-height: 1.5;
+      transition: all 0.2s ease;
+    }
+
+    .contents a:hover,
+    .contents a.active {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .terms-content {
+      min-width: 0;
+      max-width: 780px;
+    }
+
+    .intro-note {
+      padding: 19px 21px;
+      margin-bottom: 35px;
+      border: 1px solid #f2d5d9;
+      border-left: 3px solid var(--accent);
+      border-radius: 7px;
+      background: #fffafa;
+      color: #555;
+      font-size: 13px;
+    }
+
+    .intro-note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .terms-section {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 105px;
+    }
+
+    .terms-section:last-child {
+      border-bottom: none;
+    }
+
+    .terms-section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 15px;
+      color: var(--text);
+      font-size: 21px;
+      font-weight: 750;
+      line-height: 1.4;
+      letter-spacing: -0.45px;
+    }
+
+    .section-number {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .terms-section p {
+      margin-bottom: 13px;
+      color: #5f6368;
+      font-size: 14px;
+    }
+
+    .terms-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-section strong {
+      color: #303134;
+      font-weight: 700;
+    }
+
+    .terms-section ul {
+      padding-left: 22px;
+      margin: 12px 0 15px;
+      color: #5f6368;
+    }
+
+    .terms-section li {
+      padding-left: 4px;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .terms-section li::marker {
+      color: var(--accent);
+    }
+        .terms-section a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .terms-section a:hover {
+      color: #a91f2e;
+    }
+
+    .subheading {
+      margin: 21px 0 8px;
+      color: #303134;
+      font-size: 15px;
+      font-weight: 750;
+    }
+
+    .important-box {
+      margin: 18px 0;
+      padding: 16px 19px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      background: #fafafa;
+      color: #555;
+      font-size: 13px;
+    }
+
+    .important-box strong {
+      color: var(--text);
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+    }
+
+    .footer-inner {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: auto;
+      padding: 28px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #5f6368;
+      font-size: 12px;
+    }
+
+    .footer-brand img {
+      width: 27px;
+      height: 27px;
+      object-fit: contain;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 21px;
+    }
+
+    .footer-links a {
+      color: #5f6368;
+      font-size: 12px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover,
+    .footer-links a.active {
+      color: var(--accent);
+    }
+
+    .copyright {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: auto;
+      padding: 0 0 23px;
+      color: #9aa0a6;
+      font-size: 11px;
+    }
+
+    @media (max-width: 850px) {
+      .document-layout {
+        grid-template-columns: 210px minmax(0, 1fr);
+        gap: 32px;
+      }
+
+      .contents {
+        padding: 18px 12px;
+      }
+
+      .header-nav {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .site-header {
+        height: 66px;
+      }
+
+      .header-inner,
+      .page-heading,
+      .document-layout,
+      .footer-inner,
+      .copyright {
+        width: calc(100% - 34px);
+      }
+
+      .brand img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .brand-name {
+        font-size: 17px;
+      }
+
+      .header-nav {
+        gap: 12px;
+      }
+
+      .header-nav a {
+        font-size: 11px;
+      }
+
+      .header-nav a:first-child {
+        display: none;
+      }
+
+      .header-dashboard {
+        padding: 8px 11px;
+      }
+
+      .page-heading {
+        padding: 48px 0 32px;
+      }
+
+      .page-heading h1 {
+        font-size: 34px;
+      }
+
+      .document-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0 60px;
+      }
+
+      .contents {
+        position: static;
+        width: 100%;
+      }
+
+      .contents nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px 8px;
+      }
+
+      .terms-content {
+        width: 100%;
+      }
+
+      .terms-section h2 {
+        font-size: 19px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        gap: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="signup.html" class="brand" aria-label="Customer Hunt home">
+        <img src="logo.png" alt="Customer Hunt logo">
+        <span class="brand-name">Customer Hunt</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="policies.html">Privacy</a>
+        <a href="terms.html" class="active">Terms</a>
+        <a href="dashboard.html" class="header-dashboard">Dashboard</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-heading">
+
+      <div class="eyebrow">Legal information</div>
+
+      <h1>Terms and Conditions</h1>
+
+      <p>
+        These Terms and Conditions explain the rules that apply when you
+        access or use Customer Hunt, including its product discovery,
+        lead delivery, account and subscription features.
+      </p>
+
+      <div class="document-meta">
+        <span>Effective date: <strong>November 8, 2026</strong></span>
+        <span>Last updated: <strong>November 8, 2026</strong></span>
+      </div>
+
+    </section>
+
+    <div class="document-layout">
+
+      <aside class="contents" aria-label="Terms navigation">
+
+        <h2>On this page</h2>
+
+        <nav>
+          <a href="#agreement">1. Agreement</a>
+          <a href="#eligibility">2. Eligibility</a>
+          <a href="#accounts">3. Accounts</a>
+          <a href="#service">4. Our Service</a>
+          <a href="#leads">5. Leads and Sources</a>
+          <a href="#acceptable-use">6. Acceptable Use</a>
+          <a href="#third-party">7. Third Parties</a>
+          <a href="#subscriptions">8. Subscriptions</a>
+          <a href="#payments">9. Payments</a>
+          <a href="#availability">10. Availability</a>
+          <a href="#intellectual-property">11. Intellectual Property</a>
+          <a href="#liability">12. Liability</a>
+          <a href="#termination">13. Termination</a>
+          <a href="#changes">14. Changes</a>
+          <a href="#general">15. General Terms</a>
+          <a href="#contact">16. Contact</a>
+        </nav>
+
+      </aside>
+
+      <article class="terms-content">
+
+        <div class="intro-note">
+          <strong>Please read these Terms carefully.</strong>
+          By creating an account, accessing or using Customer Hunt,
+          you agree to these Terms and Conditions. If you do not agree,
+          do not use the service.
+        </div>
+
+        <section class="terms-section" id="agreement">
+
+          <h2>
+            <span class="section-number">01</span>
+            Agreement to These Terms
+          </h2>
+
+          <p>
+            These Terms and Conditions ("Terms") govern your access to
+            and use of Customer Hunt, including its website, account
+            features, product management tools, lead discovery features
+            and related services.
+          </p>
+
+          <p>
+            In these Terms, "Customer Hunt", "we", "us" and "our" refer
+            to the service operating under the Customer Hunt name.
+            "You" and "your" refer to the individual or organization
+            accessing or using the service.
+          </p>
+
+          <p>
+            By registering an account, purchasing a subscription,
+            creating a product or otherwise using the service, you
+            confirm that you have read and accepted these Terms and
+            our <a href="policies.html">Privacy Policy</a>.
+          </p>
+
+          <p>
+            If you use Customer Hunt on behalf of a business or
+            organization, you confirm that you have authority to accept
+            these Terms on its behalf.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="eligibility">
+
+          <h2>
+            <span class="section-number">02</span>
+            Eligibility
+          </h2>
+
+          <p>
+            You must be at least 18 years old and legally capable of
+            entering into a binding agreement to create an account
+            or use Customer Hunt.
+          </p>
+
+          <p>
+            By using the service, you confirm that:
+          </p>
+
+          <ul>
+            <li>You meet the applicable age requirement.</li>
+            <li>You can legally agree to these Terms.</li>
+            <li>Your use of the service does not violate any law or regulation applicable to you.</li>
+            <li>You are not prohibited from using the service under applicable law.</li>
+          </ul>
+
+          <p>
+            We may restrict or suspend access where we reasonably
+            believe these requirements are not being met.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="accounts">
+
+          <h2>
+            <span class="section-number">03</span>
+            Accounts and Account Security
+          </h2>
+
+          <p>
+            Certain Customer Hunt features require an account.
+            You agree to provide accurate information during
+            registration and to keep your account information updated.
+          </p>
+
+          <p>
+            You are responsible for:
+          </p>
+
+          <ul>
+            <li>Maintaining the confidentiality of your password and login credentials.</li>
+            <li>Protecting access to the email address associated with your account.</li>
+            <li>All activity carried out through your account, except where applicable law provides otherwise.</li>
+            <li>Promptly notifying us if you suspect unauthorized account access.</li>
+            <li>Ensuring that your account information remains accurate.</li>
+          </ul>
+
+          <p>
+            You must not sell, rent, transfer or share access to your
+            account with another person in a way that violates these
+            Terms or compromises account security.
+          </p>
+
+          <p>
+            We may take reasonable steps to protect accounts and
+            the service from unauthorized access, fraud or misuse.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="service">
+
+          <h2>
+            <span class="section-number">04</span>
+            Description of Our Service
+          </h2>
+
+          <p>
+            Customer Hunt is a lead discovery platform designed to help
+            sellers identify publicly available online discussions and
+            signals that may indicate interest in products or services.
+          </p>
+
+          <p>
+            Users can create products by providing information about
+            what they sell and selecting a target country. Customer Hunt
+            uses this information to search for potentially relevant
+            public buying-intent signals.
+          </p>
+
+          <p>
+            Depending on the available plan and service operation,
+            the platform may deliver an initial lead after hunting
+            begins and continue searching for additional qualifying
+            opportunities over time.
+          </p>
+
+          <p>
+            The platform may organize discovered results into product
+            inboxes and provide links to the original public sources.
+          </p>
+
+          <div class="important-box">
+            <strong>Important:</strong> Customer Hunt is a discovery
+            and research tool. It does not guarantee that a particular
+            product will receive leads, that every search will find
+            a qualifying result, or that a discovered person will
+            become a customer.
+          </div>
+
+        </section>
+        
+                  <section class="terms-section" id="leads">
+
+          <h2>
+            <span class="section-number">05</span>
+            Leads, Public Sources and Results
+          </h2>
+
+          <p>
+            Customer Hunt may identify publicly accessible posts,
+            discussions, questions or other online content that
+            appears relevant to the products and target locations
+            selected by a user.
+          </p>
+
+          <p>
+            A discovered result is a potential opportunity, not a
+            verified promise that its author intends to purchase
+            your product or service.
+          </p>
+
+          <p>
+            You acknowledge and agree that:
+          </p>
+
+          <ul>
+            <li>Search results may be incomplete, delayed, duplicated or irrelevant.</li>
+            <li>Public posts may be edited, deleted, restricted or moved by their original publishers.</li>
+            <li>Information in a public post may be inaccurate, outdated or misleading.</li>
+            <li>A source link may become unavailable after a lead is delivered.</li>
+            <li>Customer Hunt does not control the content, accuracy or availability of third-party posts.</li>
+            <li>You are responsible for reviewing a lead and deciding whether it is suitable for your business.</li>
+          </ul>
+
+          <p>
+            You should review the original source before contacting
+            anyone or relying on information presented in a lead.
+          </p>
+
+          <p>
+            You must not represent a discovered lead as a confirmed
+            customer, endorsement, purchase commitment or verified
+            sales opportunity unless you have independent evidence
+            supporting that representation.
+          </p>
+
+          <p>
+            Customer Hunt does not guarantee a specific number of
+            leads, conversion rate, revenue, sales result or business
+            outcome.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="acceptable-use">
+
+          <h2>
+            <span class="section-number">06</span>
+            Acceptable Use
+          </h2>
+
+          <p>
+            You agree to use Customer Hunt responsibly and only for
+            lawful business and research purposes.
+          </p>
+
+          <p>
+            You must not:
+          </p>
+
+          <ul>
+            <li>Use the service for fraud, deception, harassment, threats or unlawful activities.</li>
+            <li>Use discovered information to send unlawful, unsolicited or abusive communications.</li>
+            <li>Violate privacy, data protection, consumer protection, intellectual property or marketing laws.</li>
+            <li>Use the platform to collect, expose, sell or misuse personal information unlawfully.</li>
+            <li>Attempt to gain unauthorized access to another user's account or data.</li>
+            <li>Interfere with, damage, overload or disrupt the service or its infrastructure.</li>
+            <li>Introduce malicious code, viruses or harmful software.</li>
+            <li>Reverse engineer, copy or exploit protected parts of the service except where applicable law permits.</li>
+            <li>Misrepresent your identity, business or intentions when contacting people.</li>
+            <li>Use automated access methods against Customer Hunt in a way that disrupts the service or violates applicable restrictions.</li>
+          </ul>
+
+          <p>
+            You are responsible for ensuring that your communications,
+            marketing campaigns and business activities comply with
+            the laws that apply to you and the people you contact.
+          </p>
+
+          <p>
+            We may investigate suspected misuse and take reasonable
+            action to protect users, third parties and the platform.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="third-party">
+
+          <h2>
+            <span class="section-number">07</span>
+            Third-Party Websites and Platforms
+          </h2>
+
+          <p>
+            Customer Hunt may interact with or direct users to
+            third-party search engines, websites, online communities
+            and publishing platforms.
+          </p>
+
+          <p>
+            These third-party services operate independently of
+            Customer Hunt. Their content, rules, privacy practices,
+            availability and decisions are outside our control.
+          </p>
+
+          <p>
+            When using or accessing a third-party platform, you must
+            comply with its applicable terms, acceptable-use rules,
+            privacy requirements and other restrictions.
+          </p>
+
+          <p>
+            You must not use information obtained through Customer
+            Hunt in a way that violates the rules of the original
+            platform or the rights of the people who published it.
+          </p>
+
+          <p>
+            Links to external websites are provided for reference
+            and convenience. A link does not mean that Customer
+            Hunt owns, controls, endorses or guarantees the linked
+            website or its content.
+          </p>
+
+          <p>
+            We are not responsible for third-party website changes,
+            interruptions, content removal, account restrictions
+            or independent service decisions.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="subscriptions">
+
+          <h2>
+            <span class="section-number">08</span>
+            Plans and Subscriptions
+          </h2>
+
+          <p>
+            Customer Hunt may offer free and paid plans. Available
+            features, product limits and subscription conditions
+            are displayed on the relevant pricing or billing page.
+          </p>
+
+          <p>
+            The plans currently offered are:
+          </p>
+
+          <div class="important-box">
+            <strong>Free plan:</strong> Allows up to one product,
+            subject to the applicable service limits.
+
+            <br><br>
+
+            <strong>Pro plan:</strong> Allows up to ten products
+            for $19 per month, subject to the applicable subscription
+            conditions.
+          </div>
+
+          <p>
+            A product limit refers to the number of products that
+            may be active under the relevant plan. It does not
+            represent a guarantee of a particular number of leads.
+          </p>
+
+          <p>
+            Subscription features and limits apply according to
+            the plan associated with your account.
+          </p>
+
+          <p>
+            We may introduce additional plans, features or pricing
+            options. Any changes affecting an existing subscription
+            will be handled in accordance with applicable law and
+            the subscription terms presented to you.
+          </p>
+
+          <h3 class="subheading">Subscription renewal</h3>
+
+          <p>
+            Paid subscriptions may renew automatically at the
+            displayed billing interval unless cancelled before
+            the applicable renewal.
+          </p>
+
+          <h3 class="subheading">Cancellation</h3>
+
+          <p>
+            You may request cancellation through the available
+            account billing controls where supported.
+          </p>
+
+          <p>
+            Unless the checkout terms or applicable law provide
+            otherwise, cancellation prevents the next renewal
+            rather than automatically reversing a payment already
+            completed.
+          </p>
+
+          <p>
+            Any remaining access following cancellation depends
+            on the subscription status and the billing conditions
+            presented when you purchased the plan.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="payments">
+
+          <h2>
+            <span class="section-number">09</span>
+            Payments, Billing and Refunds
+          </h2>
+
+          <p>
+            Paid subscriptions are processed through the payment
+            provider presented during checkout.
+          </p>
+
+          <p>
+            When purchasing a subscription, you authorize the
+            applicable payment provider to process the payment
+            using the payment method you select.
+          </p>
+
+          <p>
+            The price, billing interval, currency and other
+            applicable charges will be displayed during checkout
+            before you confirm your purchase.
+          </p>
+
+          <p>
+            You are responsible for reviewing the displayed
+            payment information before completing a transaction.
+          </p>
+
+          <p>
+            Payment processing may be subject to separate terms,
+            conditions and privacy practices imposed by the
+            payment provider.
+          </p>
+
+          <h3 class="subheading">Failed payments</h3>
+
+          <p>
+            If a subscription payment fails, access to paid
+            features may be restricted, suspended or changed
+            depending on the payment status and applicable
+            subscription conditions.
+          </p>
+
+          <h3 class="subheading">Refunds</h3>
+
+          <p>
+            Refund requests will be handled according to the
+            applicable checkout conditions and mandatory consumer
+            protection laws.
+          </p>
+
+          <p>
+            Nothing in these Terms removes any refund or
+            cancellation rights that cannot legally be excluded.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="availability">
+
+          <h2>
+            <span class="section-number">10</span>
+            Service Availability and Changes
+          </h2>
+
+          <p>
+            We aim to keep Customer Hunt accessible and functional,
+            but uninterrupted availability cannot be guaranteed.
+          </p>
+
+          <p>
+            The service may occasionally experience interruptions
+            due to maintenance, technical problems, infrastructure
+            failures, third-party services, security incidents
+            or other circumstances.
+          </p>
+
+          <p>
+            Search availability and results may also depend on
+            external websites, search engines, access restrictions
+            and changes to third-party services.
+          </p>
+
+          <p>
+            We may update, improve, modify, suspend or discontinue
+            features where reasonably necessary for security,
+            maintenance, legal compliance or service development.
+          </p>
+
+          <p>
+            Where a change materially affects an existing paid
+            service, we will handle it in accordance with
+            applicable law and relevant subscription conditions.
+          </p>
+
+        </section>
+        </body>
+                <section class="terms-section" id="intellectual-property">
+
+          <h2>
+            <span class="section-number">11</span>
+            Intellectual Property
+          </h2>
+
+          <p>
+            Customer Hunt and its original branding, interface,
+            design, software, text, graphics and other original
+            materials are protected by applicable intellectual
+            property laws.
+          </p>
+
+          <p>
+            Except where permitted by law or expressly authorized
+            by us, you must not reproduce, distribute, modify,
+            commercially exploit or create unauthorized copies
+            of protected Customer Hunt materials.
+          </p>
+
+          <p>
+            Your use of the service does not transfer ownership
+            of Customer Hunt intellectual property to you.
+          </p>
+
+          <p>
+            You retain responsibility for content and information
+            that you submit to the platform. By submitting material,
+            you grant us permission to use, process, store and
+            display it as reasonably necessary to operate and
+            provide the service, subject to our Privacy Policy
+            and applicable law.
+          </p>
+
+          <p>
+            Third-party content discovered through Customer Hunt
+            remains subject to the rights of its respective
+            owners and publishers.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="liability">
+
+          <h2>
+            <span class="section-number">12</span>
+            Disclaimers and Limitation of Liability
+          </h2>
+
+          <h3 class="subheading">Service provided as available</h3>
+
+          <p>
+            Customer Hunt is provided on an "as available" basis.
+            To the extent permitted by applicable law, we do not
+            guarantee that the service will always be uninterrupted,
+            error-free, secure or suitable for every business purpose.
+          </p>
+
+          <p>
+            We do not guarantee the accuracy, completeness,
+            relevance or continued availability of third-party
+            information presented through the service.
+          </p>
+
+          <h3 class="subheading">Business decisions</h3>
+
+          <p>
+            You are responsible for evaluating discovered leads
+            and making your own business decisions. Customer Hunt
+            is not a guarantee of sales, customers, revenue,
+            profit or commercial success.
+          </p>
+
+          <h3 class="subheading">Limitation of liability</h3>
+
+          <p>
+            To the maximum extent permitted by applicable law,
+            Customer Hunt will not be liable for indirect,
+            incidental, special, consequential or punitive
+            losses, including loss of profits, revenue,
+            business opportunities, data or goodwill arising
+            from or connected with your use of the service.
+          </p>
+
+          <p>
+            To the maximum extent permitted by applicable law,
+            our total liability arising from or relating to
+            the service will be limited to the amount you paid
+            directly to Customer Hunt for the service during
+            the twelve months immediately preceding the event
+            giving rise to the claim.
+          </p>
+
+          <p>
+            These limitations do not apply to liability that
+            cannot legally be excluded or limited, including
+            any rights or remedies that mandatory law protects.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="termination">
+
+          <h2>
+            <span class="section-number">13</span>
+            Suspension and Termination
+          </h2>
+
+          <p>
+            You may stop using Customer Hunt at any time.
+            You may also request account closure through
+            the available account controls or the contact
+            method described in our Privacy Policy.
+          </p>
+
+          <p>
+            We may restrict, suspend or terminate access
+            where reasonably necessary if:
+          </p>
+
+          <ul>
+            <li>You materially violate these Terms.</li>
+            <li>Your account is involved in fraud, abuse or unlawful activity.</li>
+            <li>Your use creates a security risk or threatens the operation of the service.</li>
+            <li>We are legally required to restrict or discontinue access.</li>
+            <li>Continued access would create a material risk to other users, third parties or the platform.</li>
+          </ul>
+
+          <p>
+            Where reasonably possible and legally permitted,
+            we may provide notice and an opportunity to address
+            a violation before taking action.
+          </p>
+
+          <p>
+            Termination does not remove obligations or liabilities
+            that arose before termination. Provisions that by
+            their nature should continue after termination
+            will remain effective.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="changes">
+
+          <h2>
+            <span class="section-number">14</span>
+            Changes to These Terms
+          </h2>
+
+          <p>
+            We may update these Terms to reflect changes in
+            our service, business operations, security practices,
+            legal requirements or other relevant circumstances.
+          </p>
+
+          <p>
+            When changes are made, the updated version will
+            be published on this page with a revised
+            "Last updated" date.
+          </p>
+
+          <p>
+            Where a change materially affects your rights
+            or obligations, we will provide notice through
+            an appropriate channel where required by law.
+          </p>
+
+          <p>
+            Your continued use of Customer Hunt after updated
+            Terms become effective constitutes acceptance
+            of those changes to the extent permitted by law.
+          </p>
+
+          <p>
+            If you do not agree with updated Terms, you should
+            stop using the service.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="general">
+
+          <h2>
+            <span class="section-number">15</span>
+            General Provisions
+          </h2>
+
+          <h3 class="subheading">Applicable law</h3>
+
+          <p>
+            These Terms are subject to the laws that apply
+            to the relationship between you and Customer Hunt,
+            without excluding mandatory legal protections
+            or consumer rights that apply to you.
+          </p>
+
+          <h3 class="subheading">Severability</h3>
+
+          <p>
+            If any provision of these Terms is found to be
+            invalid or unenforceable, the remaining provisions
+            will continue to apply to the extent legally permitted.
+          </p>
+
+          <h3 class="subheading">No waiver</h3>
+
+          <p>
+            If we do not enforce a provision of these Terms
+            immediately, that does not mean we waive our
+            right to enforce it later.
+          </p>
+
+          <h3 class="subheading">Entire agreement</h3>
+
+          <p>
+            These Terms, together with our Privacy Policy
+            and any applicable subscription conditions,
+            form the agreement governing your use of
+            Customer Hunt.
+          </p>
+
+          <h3 class="subheading">Assignment</h3>
+
+          <p>
+            You may not transfer your rights or obligations
+            under these Terms without our prior permission,
+            except where applicable law allows otherwise.
+          </p>
+
+        </section>
+
+        <section class="terms-section" id="contact">
+
+          <h2>
+            <span class="section-number">16</span>
+            Contact and Questions
+          </h2>
+
+          <p>
+            If you have questions about these Terms, your
+            account or your use of Customer Hunt, please
+            use the contact information provided in our
+            <a href="policies.html">Privacy Policy</a>.
+          </p>
+
+          <p>
+            For privacy-related requests, please refer
+            to the contact instructions in that policy.
+          </p>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <a href="signup.html" class="footer-brand">
+        <img src="logo.png" alt="">
+        <span>Customer Hunt</span>
+      </a>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="policies.html">Privacy Policy</a>
+        <a href="terms.html" class="active">Terms and Conditions</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="copyright-year">2026</span> Customer Hunt. All rights reserved.
+    </div>
+
+  </footer>
+
+  <script>
+    "use strict";
+
+    // Keep the footer year current.
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+
+    // Highlight the section currently being read.
+    const contentsLinks = Array.from(
+      document.querySelectorAll(".contents a")
+    );
+
+    const sections = contentsLinks
+      .map(link => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+
+    if ("IntersectionObserver" in window) {
+      const sectionObserver = new IntersectionObserver(
+        entries => {
+          const visibleEntries = entries
+            .filter(entry => entry.isIntersecting)
+            .sort(
+              (a, b) =>
+                a.boundingClientRect.top - b.boundingClientRect.top
+            );
+
+          if (!visibleEntries.length) return;
+
+          const currentId = visibleEntries[0].target.id;
+
+          contentsLinks.forEach(link => {
+            const isActive =
+              link.getAttribute("href") === "#" + currentId;
+
+            link.classList.toggle("active", isActive);
+
+            if (isActive) {
+              link.setAttribute("aria-current", "location");
+            } else {
+              link.removeAttribute("aria-current");
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "-110px 0px -65% 0px",
+          threshold: 0
+        }
+      );
+
+      sections.forEach(section => {
+        sectionObserver.observe(section);
+      });
+    }
+
+    // Handle direct links to sections after the page loads.
+    window.addEventListener("load", () => {
+      if (!window.location.hash) return;
+
+      const target = document.getElementById(
+        decodeURIComponent(window.location.hash.slice(1))
+      );
+
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }, 100);
+      }
+    });
+  </script>
+
+</body>
+</html>

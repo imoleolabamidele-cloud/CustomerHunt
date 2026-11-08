@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Create your Customer Hunt account or log in to continue finding customers.">
+  <title>Account Access | Customer Hunt</title>
+
+  <style>
+    :root {
+      --red: #e53935;
+      --red-dark: #c62828;
+      --ink: #171717;
+      --muted: #777777;
+      --line: #e9e9e9;
+      --soft: #fafafa;
+      --white: #ffffff;
+      --success: #16834a;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      height: 76px;
+      padding: 0 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 17px;
+      font-weight: 850;
+      letter-spacing: -.6px;
+    }
+
+    .brand img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
+
+    .topbar-note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .topbar-note a {
+      color: var(--red);
+      font-weight: 750;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 55px 20px 65px;
+      background:
+        radial-gradient(
+          ellipse at 50% 0%,
+          rgba(229,57,53,.045),
+          transparent 55%
+        ),
+        #ffffff;
+    }
+
+    .auth-layout {
+      width: 100%;
+      max-width: 1020px;
+      display: grid;
+      grid-template-columns: 1fr 430px;
+      align-items: center;
+      gap: 85px;
+    }
+
+    .intro {
+      max-width: 470px;
+    }
+
+    .intro-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid #f1d9d7;
+      border-radius: 50px;
+      background: #fffafa;
+      color: var(--red-dark);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .intro-label span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+    }
+
+    .intro h1 {
+      font-size: clamp(36px, 5vw, 53px);
+      line-height: 1.13;
+      letter-spacing: -2.7px;
+      font-weight: 850;
+    }
+
+    .intro h1 span {
+      color: var(--red);
+    }
+
+    .intro-description {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+      max-width: 420px;
+    }
+
+    .intro-points {
+      margin-top: 34px;
+      display: grid;
+      gap: 17px;
+    }
+
+    .intro-point {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 650;
+      color: #444;
+    }
+
+    .point-icon {
+      width: 31px;
+      height: 31px;
+      flex: 0 0 31px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      background: #fff0ef;
+      color: var(--red);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .auth-card {
+      width: 100%;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: 0 18px 55px rgba(0,0,0,.055);
+    }
+
+    .card-heading h2 {
+      font-size: 23px;
+      font-weight: 820;
+      letter-spacing: -.8px;
+    }
+
+    .card-heading p {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .auth-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 4px;
+      gap: 4px;
+      margin-top: 27px;
+      border-radius: 9px;
+      background: #f5f5f5;
+    }
+
+    .auth-tab {
+      min-height: 39px;
+      border: 0;
+      border-radius: 7px;
+      background: transparent;
+      color: #777;
+      font-size: 12px;
+      font-weight: 750;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .auth-tab.active {
+      color: var(--ink);
+      background: white;
+      box-shadow: 0 1px 5px rgba(0,0,0,.08);
+    }
+
+    .auth-form {
+      margin-top: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 11px;
+      font-weight: 750;
+    }
+
+    .input-wrap {
+      position: relative;
+    }
+
+    .form-group input {
+      width: 100%;
+      height: 47px;
+      padding: 0 13px;
+      border: 1px solid #dedede;
+      border-radius: 8px;
+      outline: none;
+      background: white;
+      color: var(--ink);
+      font-size: 13px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .form-group input::placeholder {
+      color: #b1b1b1;
+    }
+
+    .form-group input:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(229,57,53,.09);
+    }
+
+    .password-input {
+      padding-right: 66px !important;
+    }
+
+    .password-toggle {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      border: 0;
+      background: transparent;
+      color: #777;
+      font-size: 10px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .password-toggle:hover {
+      color: var(--red);
+    }
+
+    .password-toggle:focus-visible {
+      outline: 2px solid var(--red);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    .password-hint {
+      margin-top: 7px;
+      color: #929292;
+      font-size: 10px;
+    }
+        .form-options {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      margin: 3px 0 20px;
+    }
+
+    .remember-option {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #666;
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    .remember-option input {
+      width: 14px;
+      height: 14px;
+      accent-color: var(--red);
+    }
+
+    .submit-button {
+      width: 100%;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--red);
+      color: white;
+      font-size: 12px;
+      font-weight: 850;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .submit-button:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    .submit-button:disabled {
+      opacity: .65;
+      cursor: wait;
+      transform: none;
+    }
+
+    .form-message {
+      display: none;
+      margin-bottom: 17px;
+      padding: 11px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .form-message.visible {
+      display: block;
+    }
+
+    .form-message.error {
+      background: #fff0ef;
+      color: #b42318;
+      border: 1px solid #f5d0cd;
+    }
+
+    .form-message.success {
+      background: #effaf3;
+      color: #16723e;
+      border: 1px solid #cdebd6;
+    }
+
+    .form-bottom {
+      margin-top: 22px;
+      padding-top: 19px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: #888;
+      font-size: 11px;
+    }
+
+    .form-bottom button {
+      border: 0;
+      background: transparent;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .terms-note {
+      margin-top: 17px;
+      color: #999;
+      font-size: 10px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .terms-note a {
+      color: #555;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .site-footer {
+      min-height: 65px;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      border-top: 1px solid var(--line);
+      background: white;
+    }
+
+    .footer-copy {
+      color: #999;
+      font-size: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: #777;
+      font-size: 10px;
+      font-weight: 650;
+    }
+
+    .footer-links a:hover {
+      color: var(--red);
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 850px) {
+      .auth-layout {
+        max-width: 470px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .intro {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .intro h1 {
+        font-size: 39px;
+      }
+
+      .intro-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .intro-points {
+        display: none;
+      }
+
+      .intro-label {
+        margin-bottom: 17px;
+      }
+
+      .auth-card {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .topbar {
+        height: 67px;
+        padding: 0 19px;
+      }
+
+      .brand {
+        font-size: 14px;
+      }
+
+      .brand img {
+        width: 33px;
+        height: 33px;
+      }
+
+      .topbar-note {
+        font-size: 10px;
+      }
+
+      .main {
+        padding: 38px 17px 45px;
+      }
+
+      .intro h1 {
+        font-size: 34px;
+        letter-spacing: -1.8px;
+      }
+
+      .intro-description {
+        font-size: 12px;
+      }
+
+      .auth-card {
+        padding: 25px 20px;
+      }
+
+      .site-footer {
+        padding: 18px;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .footer-links {
+        gap: 17px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="topbar">
+      <a href="signup.html" class="brand" aria-label="Customer Hunt">
+        <img src="logo.png" alt="Customer Hunt logo">
+        <span>CUSTOMER HUNT</span>
+      </a>
+
+      <p class="topbar-note">
+        Already a member?
+        <a href="#login" id="topLoginLink">Log in</a>
+      </p>
+    </header>
+
+    <main class="main">
+      <div class="auth-layout">
+
+        <section class="intro">
+          <div class="inro-label">
+            <span></span
+          </div>
+
+          <h1>
+            Find your next<br>
+            <span>customer.</span>
+          </h1>
+
+          <p class="intro-description">
+            Discover public buying-intent conversations, organise
+            potential customers and spend more time growing your business.
+            Your next opportunity starts here.
+          </p>
+
+          <div class="intro-points">
+            <div class="intro-point">
+              <span class="point-icon">⌕</span>
+              Discover potential customers
+            </div>
+
+            <div class="intro-point">
+              <span class="point-icon">✉</span>
+              Keep opportunities organised
+            </div>
+
+            <div class="intro-point">
+              <span class="point-icon">↗</span>
+              Explore original source posts
+            </div>
+          </div>
+        </section>
+
+        <section class="auth-card" aria-label="Account access">
+
+          <div class="card-heading">
+            <h2 id="cardTitle">Create your account</h2>
+            <p id="cardDescription">
+              Get started with Customer Hunt.
+            </p>
+          </div>
+
+          <div class="auth-tabs" role="tablist" aria-label="Account options">
+            <button
+              type="button"
+              class="auth-tab active"
+              id="signupTab"
+              role="tab"
+              aria-selected="true"
+              aria-controls="authForm"
+            >Sign up</button>
+
+            <button
+              type="button"
+              class="auth-tab"
+              id="loginTab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="authForm"
+            >Log in</button>
+          </div>
+
+          <form class="auth-form" id="authForm" novalidate>
+
+            <div
+              class="form-message"
+              id="formMessage"
+              role="status"
+              aria-live="polite"
+            ></div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                maxlength="254"
+                required
+              >
+            </div>
+
+            <div class="form-group" id="nameGroup">
+              <label for="fullName">Full name</label>
+
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                maxlength="100"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+
+              <div class="input-wrap">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="password-input"
+                  placeholder="Enter your password"
+                  autocomplete="new-password"
+                  minlength="12"
+                  maxlength="128"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-target="password"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >SHOW</button>
+              </div>
+
+              <p class="password-hint" id="passwordHint">
+                Use at least 12 characters.
+              </p>
+            </div>
+
+            <div class="form-group" id="confirmGroup">
+              <label for="confirmPassword">Confirm password</label>
+
+              <div class="input-wrap">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  class="password-input"
+                  placeholder="Enter your password again"
+                  autocomplete="new-password"
+                  minlength="12"
+                  maxlength="128"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-target="confirmPassword"
+                  aria-label="Show confirmation password"
+                  aria-pressed="false"
+                >SHOW</button>
+              </div>
+            </div>
+                        <div class="form-options" id="loginOptions" hidden>
+              <label class="remember-option">
+                <input
+                  type="checkbox"
+                  id="rememberMe"
+                  name="rememberMe"
+                >
+                Remember me
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="submit-button"
+              id="submitButton"
+              aria-busy="false"
+            >
+              CREATE ACCOUNT
+              <span aria-hidden="true">→</span>
+            </button>
+
+            <div class="form-bottom">
+              <span id="switchText">Already have an account?</span>
+
+              <button type="button" id="switchButton">
+                Log in
+              </button>
+            </div>
+
+            <p class="terms-note">
+              By creating an account, you agree to our
+              <a href="terms.html">Terms</a> and
+              <a href="policies.html">Policies</a>.
+            </p>
+
+          </form>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-copy">
+        © <span id="currentYear"></span> Customer Hunt.
+      </p>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="policies.html">Policies</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </footer>
+
+  </div>
+
+  <script>
+    "use strict";
+
+    const authForm = document.getElementById("authForm");
+
+    const signupTab = document.getElementById("signupTab");
+    const loginTab = document.getElementById("loginTab");
+
+    const cardTitle = document.getElementById("cardTitle");
+    const cardDescription = document.getElementById("cardDescription");
+
+    const nameGroup = document.getElementById("nameGroup");
+    const confirmGroup = document.getElementById("confirmGroup");
+    const loginOptions = document.getElementById("loginOptions");
+
+    const fullNameInput = document.getElementById("fullName");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const confirmInput = document.getElementById("confirmPassword");
+
+    const passwordHint = document.getElementById("passwordHint");
+    const submitButton = document.getElementById("submitButton");
+
+    const formMessage = document.getElementById("formMessage");
+    const switchText = document.getElementById("switchText");
+    const switchButton = document.getElementById("switchButton");
+
+    const rememberMe = document.getElementById("rememberMe");
+
+    let currentMode = "signup";
+    let requestInProgress = false;
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    function showMessage(message, type) {
+      formMessage.textContent = message;
+      formMessage.className = "form-message visible " + type;
+    }
+
+    function clearMessage() {
+      formMessage.textContent = "";
+      formMessage.className = "form-message";
+    }
+
+    function setMode(mode, updateAddress = true) {
+      if (requestInProgress) return;
+
+      currentMode = mode === "login" ? "login" : "signup";
+
+      clearMessage();
+      authForm.reset();
+
+      const isSignup = currentMode === "signup";
+
+      signupTab.classList.toggle("active", isSignup);
+      loginTab.classList.toggle("active", !isSignup);
+
+      signupTab.setAttribute("aria-selected", String(isSignup));
+      loginTab.setAttribute("aria-selected", String(!isSignup));
+
+      nameGroup.hidden = !isSignup;
+      confirmGroup.hidden = !isSignup;
+      loginOptions.hidden = isSignup;
+
+      fullNameInput.required = isSignup;
+      confirmInput.required = isSignup;
+
+      passwordInput.autocomplete = isSignup
+        ? "new-password"
+        : "current-password";
+
+      confirmInput.autocomplete = "new-password";
+
+      passwordInput.minLength = isSignup ? 12 : 1;
+
+      cardTitle.textContent = isSignup
+        ? "Create your account"
+        : "Welcome back";
+
+      cardDescription.textContent = isSignup
+        ? "Get started with Customer Hunt."
+        : "Log in to your Customer Hunt account.";
+
+      passwordHint.hidden = !isSignup;
+
+      submitButton.innerHTML = isSignup
+        ? 'CREATE ACCOUNT <span aria-hidden="true">→</span>'
+        : 'LOG IN <span aria-hidden="true">→</span>';
+
+      switchText.textContent = isSignup
+        ? "Already have an account?"
+        : "New to Customer Hunt?";
+
+      switchButton.textContent = isSignup
+        ? "Log in"
+        : "Create an account";
+
+      document.querySelectorAll(".password-toggle").forEach(button => {
+        const input = document.getElementById(button.dataset.target);
+
+        input.type = "password";
+        button.textContent = "SHOW";
+        button.setAttribute("aria-pressed", "false");
+
+        button.setAttribute(
+          "aria-label",
+          input.id === "password"
+            ? "Show password"
+            : "Show confirmation password"
+        );
+      });
+
+      if (updateAddress) {
+        history.replaceState(
+          null,
+          "",
+          isSignup ? "#signup" : "#login"
+        );
+      }
+    }
+
+    signupTab.addEventListener("click", () => setMode("signup"));
+
+    loginTab.addEventListener("click", () => setMode("login"));
+
+    switchButton.addEventListener("click", () => {
+      setMode(currentMode === "signup" ? "login" : "signup");
+    });
+
+    document.getElementById("topLoginLink").addEventListener(
+      "click",
+      () => setMode("login")
+    );
+
+    document.querySelectorAll(".password-toggle").forEach(button => {
+      button.addEventListener("click", () => {
+        const input = document.getElementById(button.dataset.target);
+        const visible = input.type === "text";
+
+        input.type = visible ? "password" : "text";
+        button.textContent = visible ? "SHOW" : "HIDE";
+
+        button.setAttribute(
+          "aria-pressed",
+          String(!visible)
+        );
+
+        button.setAttribute(
+          "aria-label",
+          visible
+            ? input.id === "password"
+              ? "Show password"
+              : "Show confirmation password"
+            : input.id === "password"
+              ? "Hide password"
+              : "Hide confirmation password"
+        );
+      });
+    });
+
+    function getErrorMessage(data, status) {
+      if (status === 401) {
+        return "The email or password is incorrect.";
+      }
+
+      if (status === 409 || status === 422) {
+        return "We could not create your account with those details. Check your information or try logging in.";
+      }
+
+      if (status === 429) {
+        return "Too many attempts. Please wait before trying again.";
+      }
+
+      if (status >= 500) {
+        return "We could not complete your request. Please try again.";
+      }
+
+      if (data && typeof data.error === "string") {
+        return data.error;
+      }
+
+      return "Please check your information and try again.";
+    }
+
+    function getSafeRedirect(data) {
+      if (
+        !data ||
+        typeof data.redirect !== "string"
+      ) {
+        return null;
+      }
+
+      const redirect = data.redirect;
+
+      // Only allow a local absolute path to the dashboard.
+      // Reject protocol-relative URLs, backslashes and external URLs.
+      if (
+        !redirect.startsWith("/") ||
+        redirect.startsWith("//") ||
+        redirect.includes("\\")
+      ) {
+        return null;
+      }
+
+      try {
+        const destination = new URL(
+          redirect,
+          window.location.origin
+        );
+
+        if (
+          destination.origin !== window.location.origin ||
+          destination.pathname !== "/dashboard.html"
+        ) {
+          return null;
+        }
+
+        return destination.pathname + destination.search + destination.hash;
+
+      } catch {
+        return null;
+      }
+    }
+        async function submitAuthentication(event) {
+      event.preventDefault();
+
+      if (requestInProgress) return;
+
+      clearMessage();
+
+      const email = emailInput.value.trim().toLowerCase();
+      const password = passwordInput.value;
+      const fullName = fullNameInput.value.trim();
+      const confirmPassword = confirmInput.value;
+
+      if (!email || !emailInput.validity.valid) {
+        showMessage("Enter a valid email address.", "error");
+        emailInput.focus();
+        return;
+      }
+
+      if (!password) {
+        showMessage("Enter your password.", "error");
+        passwordInput.focus();
+        return;
+      }
+
+      if (currentMode === "signup") {
+        if (fullName.length < 2) {
+          showMessage("Enter your full name.", "error");
+          fullNameInput.focus();
+          return;
+        }
+
+        if (password.length < 12) {
+          showMessage(
+            "Your password must contain at least 12 characters.",
+            "error"
+          );
+          passwordInput.focus();
+          return;
+        }
+
+        if (password.length > 128) {
+          showMessage(
+            "Your password cannot exceed 128 characters.",
+            "error"
+          );
+          passwordInput.focus();
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          showMessage("Your passwords do not match.", "error");
+          confirmInput.focus();
+          return;
+        }
+      }
+
+      await sendAuthenticationRequest({
+        action: currentMode,
+        email,
+        password,
+
+        ...(currentMode === "signup"
+          ? { fullName }
+          : {}),
+
+        ...(currentMode === "login"
+          ? { rememberMe: rememberMe.checked }
+          : {})
+      });
+    }
+
+    authForm.addEventListener(
+      "submit",
+      submitAuthentication
+    );
+
+    async function sendAuthenticationRequest(payload) {
+      requestInProgress = true;
+
+      submitButton.disabled = true;
+      submitButton.setAttribute("aria-busy", "true");
+      submitButton.textContent = "PLEASE WAIT...";
+
+      try {
+        const response = await fetch("/api/auth", {
+          method: "POST",
+          credentials: "same-origin",
+
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+
+          body: JSON.stringify(payload)
+        });
+
+        const contentType =
+          response.headers.get("content-type") || "";
+
+        if (!contentType.toLowerCase().includes("application/json")) {
+          throw new Error(
+            "The authentication service returned an unexpected response."
+          );
+        }
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          showMessage(
+            getErrorMessage(data, response.status),
+            "error"
+          );
+          return;
+        }
+
+        if (!data || data.success !== true) {
+          showMessage(
+            getErrorMessage(data, response.status),
+            "error"
+          );
+          return;
+        }
+
+        const safeRedirect = getSafeRedirect(data);
+
+        if (!safeRedirect) {
+          showMessage(
+            "Authentication succeeded, but the dashboard destination was invalid. Please contact support.",
+            "error"
+          );
+          return;
+        }
+
+        showMessage(
+          currentMode === "signup"
+            ? "Your account has been created. Opening your dashboard..."
+            : "You are logged in. Opening your dashboard...",
+          "success"
+        );
+
+        window.location.assign(safeRedirect);
+
+      } catch (error) {
+        showMessage(
+          error.message ||
+            "We could not connect to the authentication service.",
+          "error"
+        );
+
+      } finally {
+        requestInProgress = false;
+
+        submitButton.disabled = false;
+        submitButton.setAttribute("aria-busy", "false");
+
+        submitButton.innerHTML = currentMode === "signup"
+          ? 'CREATE ACCOUNT <span aria-hidden="true">→</span>'
+          : 'LOG IN <span aria-hidden="true">→</span>';
+      }
+    }
+
+    function initialiseMode() {
+      const hash = window.location.hash.toLowerCase();
+
+      if (hash === "#login") {
+        setMode("login", false);
+      } else {
+        setMode("signup", false);
+      }
+    }
+
+    window.addEventListener(
+      "hashchange",
+      initialiseMode
+    );
+
+    initialiseMode();
+  </script>
+</body>
+</html>
